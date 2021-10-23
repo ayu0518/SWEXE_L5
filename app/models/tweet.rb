@@ -1,5 +1,6 @@
 class Tweet < ApplicationRecord
-  #TODO: validates
+  validates :message, presence: true
+
   belongs_to :user
   has_many :likes
   has_many :like_users, through: :likes, source: :user

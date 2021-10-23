@@ -4,9 +4,9 @@
     <% if session[:login_uid] %>
       <%= link_to '削除', tweet_path(e), method: :delete %>
       <% if e.likes.count > 0 %>
-        <%= link_to 'いいね削除', like_path(e), method: :delete %>
+        <%= link_to '♥', like_path(e), method: :delete %>
       <% else %>
-        <%= link_to 'いいね', likes_path(tweet_id: e.id), method: :post %>
+        <%= link_to '♡', likes_path(tweet_id: e.id), method: :post %>
       <% end %>
     <% end %>
     </p>
